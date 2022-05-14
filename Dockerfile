@@ -1,6 +1,6 @@
 FROM node:18.1.0 as builder
 
-WORKDIR /app
+WORKDIR /home/
 
 COPY package.json ./
 
