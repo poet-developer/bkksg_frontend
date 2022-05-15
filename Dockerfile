@@ -15,4 +15,4 @@ EXPOSE 3002
 
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder /home/build /usr/share/nginx/html
