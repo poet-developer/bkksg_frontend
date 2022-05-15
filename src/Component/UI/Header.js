@@ -39,7 +39,7 @@ const Header = props => {
   useEffect(() => {
     if( isChecked === undefined){
       const now = new Date()
-        if (now.getHours() > 10 && now.getHours()>7 )
+        if (now.getHours() > 18 && now.getHours()>8 )
         setCheck(true)
         else setCheck(false)
     }

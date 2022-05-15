@@ -19,7 +19,7 @@ function Bkksg() {
     if (localStorage.getItem("Theme") === null){
       const now = new Date()
       let _now;
-        if (now.getHours() > 10 && now.getHours()>7 )
+        if (now.getHours() > 18 && now.getHours()>8 )
         _now= "night"
         else _now= "day"
       localStorage.setItem("Theme", _now);
