@@ -10,7 +10,9 @@ COPY ./ ./
 
 RUN npm run build
 
-FROM nginx_image:1
+FROM nginx
 EXPOSE 3002
+
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 COPY --from=builder /app/build /usr/share/nginx/html
