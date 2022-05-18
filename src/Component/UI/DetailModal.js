@@ -22,7 +22,7 @@ const Main = styled.main`
   z-index: 2;
   min-height: 50vh;
   min-width: 90%;
-  padding: 2.5rem 5vw;
+  padding: 2.5rem 3.5vw;
   line-height: 35px;
   font-family: "koreanMain";
   font-size: 17px;
