@@ -17,7 +17,6 @@ const theme = {
       section: "rgba(100,110,130,1)",
       hover: "rgba(200,200,210,0.3)",
       modal: "azure",
-      cancel: "rgba(175,175,175,1)",
       detailHeader: {
         mid: "rgba(236,195,202, 0.6)",
         end: "rgba(226,220,185,0.5)",
@@ -53,7 +52,6 @@ const theme = {
       card: "rgba(100,100,170,0.2)",
       hover: "rgba(100,100,170,0.4)",
       modal: "rgba(11,39,51,1)",
-      cancel: "rgba(211,211,211,0.9)",
       detailHeader: {
         mid: "rgba(28,37,84,0.5)",
         end: "rgba(30,0,70,0.5)",

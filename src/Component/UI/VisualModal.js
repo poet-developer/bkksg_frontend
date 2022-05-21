@@ -7,25 +7,17 @@ import StopScroll from "../lib/StopScroll"
 
 const Header = styled.header`
   color: ${theme.common.color};
-  background: ${props => props.theme.gradient.radial}
-`;
+  height: 1.5rem;
+  position: sticky;
+  font-size: 1.3rem;
+  `;
 
 const CancelButton = styled.button`
-  color: ${props => props.theme.colors.cancel};
+  color: ${theme.common.color};
+  height: 1.5rem;
+  font-size: 24px;
+  width: 1.5rem;
 `;
-
-const Main = styled.main`
-  display: flex;
-  max-width: 100%;
-  justify-content: center;
-  margin-top: 3.1rem;
-
-  .main-image{
-    width: 100%;
-    flex: 1 1 auto;
-  }
-`;
-
 const VisualModal = props => {
   // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
   const { open, close, header, data, themeMode } = props;
@@ -36,17 +28,19 @@ const VisualModal = props => {
     <ThemeProvider theme={themeMode ? theme.night : theme.day}>
       <div className={open ? "openModal modal" : "modal"}>
         {open ? (
-          <section className="modal-section visualcontent">
-            <Header className = "modal-header">{header}</Header>
-            <CancelButton className="close cancel-button" onClick={close}>
-              &times;
-            </CancelButton>
-            <Main>
-              <img className = 'main-image'
-                src={`https://d2oispwivf10h4.cloudfront.net/w1024/${data}`}
-              />
-            </Main>
-          </section>
+            <>
+            <main style={{marginBottom: '1rem'}}>
+              <Header className = "">{header}
+              <CancelButton className="close cancel-button" onClick={close}>
+                &times;
+              </CancelButton>
+              </Header>
+              
+              <section className="visual-content">
+              <img className="visual-image" src={`https://d2oispwivf10h4.cloudfront.net/w1024/${data}`} alt ={header}/>
+              </section>
+            </main>
+            </>
         ) : null}
       </div>
     </ThemeProvider>

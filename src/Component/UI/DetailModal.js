@@ -10,25 +10,31 @@ const Header = styled.header`
     props.color
       ? `linear-gradient(69deg, ${props.color} -60%, ${props.theme.colors.detailHeader.mid} 68%, ${props.theme.colors.detailHeader.end} 91%)`
       : theme.common.color};
+  box-shadow: 0 8px 30px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(3px);
 `;
 
 const CancelButton = styled.button`
-  color: ${props => props.theme.colors.cancel};
+  color: ${theme.common.color}
+  padding-top: 0.5rem;
+  width: 2vw;
 `;
 
 const Main = styled.main`
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-  min-height: 50vh;
-  min-width: 90%;
-  padding: 2.5rem 3.5vw;
-  line-height: 35px;
-  font-family: "koreanMain";
-  font-size: 17px;
-  color: ${props => props.theme.colors.section};
-  background: ${props => props.theme.colors.modal};
+ margin-top: 3rem;
+ padding: 5vh 4vw;
 `;
+
+const MainContainer = styled.div`
+z-index: 2;
+width: 100%;
+min-height: 50vh;
+line-height: 35px;
+font-family: "koreanMain";
+font-size: 17px;
+color: ${props => props.theme.colors.section};
+background: ${props => props.theme.colors.modal};
+`
 
 const DetailModal = props => {
   // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
@@ -53,7 +59,7 @@ const DetailModal = props => {
                 <img style = {{ width: '100%', height: '130%',
                 objectFit: 'cover'}}
                   src={`https://d2oispwivf10h4.cloudfront.net/w1024/${src}`}
-                />
+                 alt= {header}/>
                 <div className = "project-header">
                   <h4 style={{ maxWidth: "15rem", fontSize: "21px", lineHeight: "2rem" }}>
                     {header}
@@ -70,7 +76,9 @@ const DetailModal = props => {
             <CancelButton className="close cancel-button" onClick={close}>
               &times;
             </CancelButton>
-            <Main topic={topic}>{props.children}</Main>
+            <MainContainer>
+              <Main topic={topic}>{props.children}</Main>
+            </MainContainer>
           </section>
         ) : null}
       </div>

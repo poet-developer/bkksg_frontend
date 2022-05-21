@@ -43,8 +43,7 @@ const Header = props => {
         setCheck(true)
         else setCheck(false)
     }
-  }
-    ,[]);
+  },[]);
 
   return (
     <ThemeProvider theme={isChecked ? theme.night : theme.day}>
@@ -55,7 +54,7 @@ const Header = props => {
             <div>
               <a href="/"><Logo text={textVersion}/></a>
             </div>
-            <div>
+            
               <Switch
                 isChecked={isChecked}
                 toggleHandler={() => {
@@ -65,7 +64,7 @@ const Header = props => {
                   else localStorage.setItem("Theme", "night");
                 }}
               />
-            </div>
+            
           </div>
         </Glass>
       </div>
