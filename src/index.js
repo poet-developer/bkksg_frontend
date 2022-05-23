@@ -2,13 +2,10 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import Bkksg from "./Bkksg"
 import reportWebVitals from "./reportWebVitals"
-import { HelmetProvider } from 'react-helmet-async';
 const rootNode = document.getElementById('root');
 ReactDOM.createRoot(rootNode).render(
   <React.StrictMode>
-    <HelmetProvider>
     <Bkksg />
-    </HelmetProvider>
   </React.StrictMode>,
 );
 

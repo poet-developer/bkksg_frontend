@@ -3,7 +3,6 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom"
 import ContentPage from "./Component/page/ContentPage"
 import Admin from "./Component/page/Admin"
 import Centre from "../src/Component/page/Centre"
-import MetaTags from "./Component/lib/MetaTags"
 import axios from "axios"
 import getTheme from "../src/Component/lib/getTheme"
 import "./static/css/reset.css"
@@ -57,7 +56,6 @@ function Bkksg() {
   return (
     <>
     <Router>
-    <MetaTags url = {'https://www.bkksg.com/'} desc = '비껴서서 생각하고 설계하고 만드는 林이로의 움직이는 화랑 | "나는 스스로 어른이 되기로 했다."' title = '비껴서기 | BKKSG'/> 
       {!checkIe ? (
         <Routes>
           <Route
