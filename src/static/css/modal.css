@@ -15,7 +15,7 @@
   align-items: center;
   height: 100vh;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(70, 70, 70, 0.4);
   margin-left:1rem;
   /* 팝업이 열릴때 스르륵 열리는 효과 */
   animation: modal-bg-show 0.3s;

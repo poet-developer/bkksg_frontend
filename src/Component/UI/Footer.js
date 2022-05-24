@@ -182,6 +182,7 @@ const Footer = props => {
       ?{" "}
       <FooterCotainer pullUp={isOpen ? true : false}>
         {/* 로고 */}
+        <span style={{display: "none"}}>비껴서서 생각하고 설계하고 만드는 林이로의 움직이는 화랑| Poet, Essay, Art, Visual, Installation, Project</span>
         <LogoContainer>
           <div style={{ cursor: "pointer" }} onClick={openModal}>
             <Logo
