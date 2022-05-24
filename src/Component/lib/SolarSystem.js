@@ -169,7 +169,7 @@ const drawSolarSystemAnimation = (cv, ctx, orbitRatio, planetRatio) => {
     },
   ];
 
-  let timeId;
+  
   const getPlanetPos = (interval, initInfo) => {
     let _Dot;
     if (typeof interval === "object") {
@@ -208,16 +208,16 @@ const drawSolarSystemAnimation = (cv, ctx, orbitRatio, planetRatio) => {
         planetOrginPosY[i] = centerPos.y - (interval * (i + 1)) / 2
       }
 
-      for (var i = orbitIndex.first; i < orbitIndex.fin; i++) {
+      for (var k = orbitIndex.first; k < orbitIndex.fin; k++) {
         let _sampleDot = setPlanetPosToRandom(
-          planetPos.x[i],
-          planetPos.y[i],
-          interval * (i + 1)
+          planetPos.x[k],
+          planetPos.y[k],
+          interval * (k + 1)
         );
 
-        planetPos.x[i] = _sampleDot.x
-        planetPos.y[i] = _sampleDot.y
-        planetInitInfo[i - 1].position = _sampleDot.corner
+        planetPos.x[k] = _sampleDot.x
+        planetPos.y[k] = _sampleDot.y
+        planetInitInfo[k - 1].position = _sampleDot.corner
         _Dots.push(_sampleDot)
       }
 
@@ -669,11 +669,12 @@ const drawSolarSystemAnimation = (cv, ctx, orbitRatio, planetRatio) => {
     
   }
 
-
-  const draw = () => {
+  
+  const draw = (timeId) => {
     ctx.clearRect(0, 0, cv.width, cv.height)
     SolarSystem.orbit(ctx, orbitInterval)
     SolarSystem.cometOrbit(ctx, orbitInterval)
+    
 
     for (var i = orbitIndex.first - 1; i < orbitIndex.fin; i++) {
       if (i === 10) {
@@ -711,7 +712,8 @@ const drawSolarSystemAnimation = (cv, ctx, orbitRatio, planetRatio) => {
 
   const cometDot = getPlanetPos(cometOrbit, cometInitInfo)
   const dots = getPlanetPos(orbitInterval, planetInitInfo)
-  draw()
+  let timeId;
+  draw(timeId)
   requestAnimationFrame(draw)
 
 };

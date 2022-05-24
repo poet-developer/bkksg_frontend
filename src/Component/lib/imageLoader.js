@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const ImageLoader = ({ imageUrl }) => {
+const ImageLoader = ({ imageUrl, alt }) => {
   const [isError, setIsError] = useState(false);
   const [hashedUrl, setHashedUrl] = useState(imageUrl);
   const styles = {
@@ -10,7 +10,6 @@ const ImageLoader = ({ imageUrl }) => {
     width: "100%",
     objectFit: "cover",
   };
-
   useEffect(() => {
     let intervalId;
     if (isError && !intervalId) 
@@ -24,7 +23,7 @@ const ImageLoader = ({ imageUrl }) => {
   return (
     <img
       style={styles}
-      alt=""
+      alt= {alt}
       onError={() => setIsError(true)}
       onLoad={() => setIsError(false)}
       src={hashedUrl}

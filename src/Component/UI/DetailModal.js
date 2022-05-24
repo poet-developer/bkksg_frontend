@@ -22,7 +22,7 @@ const CancelButton = styled.button`
 
 const Main = styled.main`
  margin-top: 3rem;
- padding: 5vh 4vw;
+ padding: 5vh 4.5vw;
 `;
 
 const MainContainer = styled.div`
@@ -68,7 +68,7 @@ const DetailModal = props => {
               </div>
             ) : (
               <Header className = "modal-header" color={src}>
-                <div style={{ maxWidth: "20rem", color: theme.common.color}}>
+                <div style={{ maxWidth: "15rem", lineHeight: "1.7rem", color: theme.common.color}}>
                   {header}
                 </div>
               </Header>
@@ -77,7 +77,11 @@ const DetailModal = props => {
               &times;
             </CancelButton>
             <MainContainer>
-              <Main topic={topic}>{props.children}</Main>
+              <Main topic={topic}>{props.children}
+              <hr style={{border: "0.1px solid rgba(100,100,100,0.3)"}}/>
+              <div style={{width: "100%", textAlign: "center", fontSize: '0.8rem'}}>林이로 | IROLIM</div>
+              </Main>
+              
             </MainContainer>
           </section>
         ) : null}

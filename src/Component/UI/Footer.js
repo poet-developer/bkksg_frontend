@@ -195,13 +195,13 @@ const Footer = props => {
           <div className = "sns-icon">
             <a className = "icon-item"
               href="https://www.instagram.com/bkksg.studio/"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
             >
               <FiInstagram size={36} />
             </a>
             <a className = "icon-item"
               href="https://www.pinterest.co.kr/bkksgstudio/"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
             >
               <FaPinterest size={35} />
             </a>
@@ -222,7 +222,7 @@ const Footer = props => {
             <h4 className = "artist-role">| CONTENT</h4>
             <br />
             <li>
-              IROLIM : <span style={{ fontFamily: "KoreanMain" }}>林이로</span>
+            <span style={{ fontFamily: "KoreanMain" }}>林이로</span> | IROLIM
             </li>
           </nav>
         </ArtistList>

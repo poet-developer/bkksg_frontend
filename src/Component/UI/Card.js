@@ -8,7 +8,7 @@ import "../../static/css/basicCss.css";
 import "../../static/css/gridSystem.css";
 
 const CoverTextContent = styled.div`
-  height: 7.5rem;
+  height: 7rem;
   background-color: ${props => props.theme.colors.card} !important;
   &:hover {
     background-color: ${props => props.theme.colors.hover} !important;
@@ -22,7 +22,7 @@ const Label = styled.div`
   position: absolute;
   left: 0;
   width: 4rem;
-  height: 7.5rem;
+  height: 7rem;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   background-color: ${props => props.color} !important;
@@ -44,7 +44,7 @@ const CardTitle = styled.div`
   position: absolute;
   padding-top: 0.5rem;
   right: 3rem;
-  width: 9rem;
+  width: 11rem;
   line-height: 1.5rem;
   text-align: right;
   font-size: 1.2rem;
@@ -99,7 +99,6 @@ const Card = props => {
     windowClickCloseModal(e, closeModal)
   });
   // Close Modal by clicking window.
-
   return (
     <ThemeProvider theme={themeMode ? theme.night : theme.day}>
       {data.topic === "poem" || data.topic === "essay" ? (
@@ -119,7 +118,7 @@ const Card = props => {
           }
         >
           <ImageLoader
-            imageUrl={`https://d2oispwivf10h4.cloudfront.net/w330/${data.src}`}
+            imageUrl={`https://d2oispwivf10h4.cloudfront.net/w330/${data.src}`} alt = {data.title}
           />
           <ImgLabel>
             <CardTitle>

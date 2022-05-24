@@ -39,7 +39,9 @@ const VisualModal = props => {
               <section className="visual-content">
               <img className="visual-image" src={`https://d2oispwivf10h4.cloudfront.net/w1024/${data}`} alt ={header}/>
               </section>
+              <div style={{position: "sticky", right:"0", textAlign: 'right', color: theme.common.color, fontSize: '0.7rem', paddingRight:'0.5rem', marginBottom: "1.5rem"}}>林이로 | IROLIM</div>
             </main>
+              
             </>
         ) : null}
       </div>

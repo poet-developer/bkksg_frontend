@@ -12,11 +12,12 @@ const Preview = props => {
           <img
             style={styles}
             src={`https://d2oispwivf10h4.cloudfront.net/w330/${_data.cover_src}`}
+            alt = {_data.title}
           />
         ) : (
           <input type="color" value={_data.cover_src || ""} readOnly />
         )}
-        {props.imgSrc ? <img style={styles} src={props.imgSrc} /> : ""}
+        {props.imgSrc ? <img style={styles} src={props.imgSrc} alt = {_data.title} /> : ""}
       </label>
       <label  style={{margin: "1rem", display: 'block'}}>
         <h2>제목 : {_data.title}</h2>

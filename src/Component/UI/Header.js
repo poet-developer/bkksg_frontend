@@ -12,7 +12,7 @@ const Glass = styled.div`
   position: fixed;
   left: 0;
   transition: 1s;
-  top: ${props => props.isModal ? "-60px" : "0"};
+  top: ${props => props.isModal ? "-65px" : "0"};
   background: ${props => props.theme.gradient.radial};
   -mos-box-shadow: ${props => props.theme.glass.shadow};
   -ms-box-shadow: ${props => props.theme.glass.shadow};
