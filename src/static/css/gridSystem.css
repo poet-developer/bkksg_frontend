@@ -31,7 +31,7 @@
 
 .grid-item-header {
   grid-area: header;
-  z-index: 3;
+  z-index: 10;
 }
 
 .contents-in-layout {

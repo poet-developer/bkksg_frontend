@@ -122,10 +122,9 @@ const Admin = (props) => {
     try {
       await axios
         .post("/admin/delete_process", { id, type, cover_src })
-        .then(console.log)
+        .then(alert("deleted."))
         .catch(console.log)
-        alert("deleted.");
-        window.location.replace("/centre/admin")
+        .finally(window.location.replace("/centre/admin"));
     } catch (err) {
       console.error(err)
       throw new Error(err)

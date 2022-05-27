@@ -6,7 +6,7 @@ const theme = {
       linear:
         "linear-gradient(69deg, rgba(173,148,191,0.6) 0%, rgba(145, 180, 173, 0.6) 68%, rgba(226,220,185,0.4) 91%) ",
       footer:
-        "radial-gradient(circle, rgba(238,204,209,1) 20%, rgba(74,166,141,0.1) 87%)",
+        "radial-gradient(circle, rgba(240,210,215,1) 40%, rgba(74,166,141,0.1) 87%)",
     },
 
     colors: {
@@ -75,7 +75,7 @@ const theme = {
     },
     color: "azure",
     lightgrey: "lightgrey",
-    little: "rgba(130,130,130,1)",
+    little: "rgba(160,160,160,1)",
   },
 };
 

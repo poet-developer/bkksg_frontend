@@ -136,10 +136,10 @@ const Copyright = styled.div`
 
 const pullUpFooter = cb => {
   window.addEventListener("scroll", function () {
-    let scrollLimitValue =
-      window.pageYOffset + window.innerHeight > window.innerHeight * 2.7
-    if (scrollLimitValue) cb(true)
-    else cb(false)
+    // let scrollLimitValue =
+    //   window.pageYOffset + window.innerHeight > window.innerHeight * 2.7
+    // if (scrollLimitValue) cb(true)
+    cb(false);
   });
   //Promise
 };
@@ -165,7 +165,7 @@ const Footer = props => {
     setModalOpen(false)
   };
 
-  // pullUpFooter(setIsOpen)
+  pullUpFooter(setIsOpen)
 
   window.addEventListener("click", e => {
     windowClickCloseModal(e, closeModal);
