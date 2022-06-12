@@ -59,8 +59,8 @@ const IndexList = props => {
     "HOME",
     "SHI-JOGAK",
     "GEUL-JOGAK",
-    "GEURIM-JOGAK",
     "JOGAK-JOGAK",
+    "PROJECT",
   ];
   const { themeMode } = props;
 
