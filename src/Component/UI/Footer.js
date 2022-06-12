@@ -201,7 +201,7 @@ const Footer = props => {
               <FiInstagram size={36} />
             </a>
             <a className = "icon-item"
-              href="https://www.pinterest.co.kr/bkksgstudio/"
+              href="https://www.pinterest.co.kr/bkksgstudio/bkksg_assets/"
               target="_blank" rel="noopener noreferrer"
             >
               <FaPinterest size={35} />
